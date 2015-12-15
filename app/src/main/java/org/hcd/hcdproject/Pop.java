@@ -30,7 +30,7 @@ public class Pop extends Activity {
         startActivity(intent);
     }
     public void onButtonChooseClicked(View v) {
-        Intent intent = new Intent(getApplicationContext(), ChooseActivity.class);
+        Intent intent = new Intent(getApplicationContext(), MainActivity_choosehelper.class);
         startActivity(intent);
     }
 }
