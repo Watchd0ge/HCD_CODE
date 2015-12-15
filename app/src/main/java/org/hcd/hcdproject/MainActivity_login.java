@@ -1,5 +1,6 @@
 package org.hcd.hcdproject;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -20,7 +21,7 @@ import com.firebase.client.ValueEventListener;
 public class MainActivity_login extends AppCompatActivity {
 
     private Firebase myFirebaseRef;
-    private SQLiteDatabase localDB;
+//    private SQLiteDatabase localDB;
     private Button login_btn;
     private EditText voucher_id_txt;
 
@@ -32,6 +33,9 @@ public class MainActivity_login extends AppCompatActivity {
         // FIREBASE SETUP
         Firebase.setAndroidContext(this);
         myFirebaseRef = new Firebase("https://hcd-firebase.firebaseio.com/");
+
+        // SQLITE SETUP
+//        localDB = new DictionaryOpenHelper(this).getReadableDatabase();
         initViews();
 
     }
@@ -56,7 +60,12 @@ public class MainActivity_login extends AppCompatActivity {
                             Log.wtf("IT WORKED", "[" + voucher_id_txt.getText().toString() + "]");
                             if (dataSnapshot.exists()){
                                 Log.wtf("THERE IS SOMETHING", "WHOOP");
+//                                ContentValues temp = new ContentValues(1);
+//                                temp.put("KEY", "voucher_id");
+//                                temp.put("VALUE", voucher_id_txt.getText().toString());
+//                                localDB.insert("dictionary", null, temp);
                                 Intent intent = new Intent(MainActivity_login.this, MainActivity_login1.class);
+                                intent.putExtra("VOUCHER_ID", voucher_id_txt.getText().toString());
                                 startActivity(intent);
                             } else {
                                 showError();
