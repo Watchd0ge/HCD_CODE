@@ -13,7 +13,7 @@ public class MainActivity_myinfo extends AppCompatActivity {
         setContentView(R.layout.activity_main_myinfo);
     }
 
-    public void onButtonAddInfoClicked(View v){
+    public void onButtonGotoAddInfoClicked(View v){
         Intent intent = new Intent(getApplicationContext(), MainActivity_myinfo1.class);
         startActivity(intent);
     }
