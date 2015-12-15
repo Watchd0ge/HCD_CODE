@@ -35,7 +35,7 @@
      <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/userlogin"
+        android:id="@+id/buttonUserLogin"
         android:src="@drawable/login_red_new"
          android:onClick="onButtonUserLoginClicked"
          android:layout_below="@+id/textView8"
@@ -44,12 +44,12 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/helperlogin"
+        android:id="@+id/buttonHelperLogin"
         android:src="@drawable/login_blue_new"
         android:onClick="onButtonHelperLoginClicked"
         android:layout_below="@+id/textView9"
-        android:layout_alignLeft="@+id/helpersignup"
-        android:layout_alignStart="@+id/helpersignup" />
+        android:layout_alignLeft="@+id/buttonHelperSignup"
+        android:layout_alignStart="@+id/buttonHelperSignup" />
 
      <TextView
         android:layout_width="wrap_content"
@@ -57,20 +57,20 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="활동보조자"
         android:id="@+id/textView9"
-        android:layout_below="@+id/usersignup"
+        android:layout_below="@+id/buttonUserSignup"
         android:layout_centerHorizontal="true"
         android:visibility="visible" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/usersignup"
+        android:id="@+id/buttonUserSignup"
         android:src="@drawable/signup_red_new"
         android:onClick="onButtonUserSignupClicked"
         android:layout_below="@+id/textView8"
         android:layout_marginTop="57dp"
-        android:layout_alignLeft="@+id/helperlogin"
-        android:layout_alignStart="@+id/helperlogin" />
+        android:layout_alignLeft="@+id/buttonHelperLogin"
+        android:layout_alignStart="@+id/buttonHelperLogin" />
 
      <ImageButton
         android:layout_width="wrap_content"
@@ -80,6 +80,6 @@
         android:layout_centerHorizontal="true"
         android:src="@drawable/signup_blue_new"
         android:onClick="onButtonHelperSignupClicked"
-        android:id="@+id/helpersignup" />
+        android:id="@+id/buttonHelperSignup" />
 
 </RelativeLayout>
