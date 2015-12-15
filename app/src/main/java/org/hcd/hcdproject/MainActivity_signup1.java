@@ -14,7 +14,7 @@ public class MainActivity_signup1 extends AppCompatActivity {
 
     }
 
-    public void onButtonAddInfoClicked(View v) {
+    public void onButtonGotoAddInfoClicked(View v){
         Intent intent = new Intent(getApplicationContext(), MainActivity_signup2.class);
         startActivity(intent);
     }

@@ -6,7 +6,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal">
+        android:layout_gravity="center_horizontal"
+        android:background="#FFD8D9D9">
 
         <TextView
             android:layout_width="wrap_content"
@@ -14,7 +15,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="등록 완료!"
             android:id="@+id/textView15"
-            android:layout_above="@+id/button4"
+            android:layout_above="@+id/buttonGotoHome"
             android:layout_centerHorizontal="true"
             android:textSize="15dp" />
 
@@ -22,26 +23,26 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="홈 화면"
-            android:id="@+id/button4"
+            android:id="@+id/buttonGotoHome"
             android:textSize="10dp"
             android:layout_marginRight="41dp"
             android:layout_marginEnd="41dp"
             android:layout_centerVertical="true"
             android:layout_alignRight="@+id/textView15"
             android:layout_alignEnd="@+id/textView15"
-            android:onClick="onButtonHomeClicked" />
+            android:onClick="onButtonGotoHomeClicked" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="활동보조 선택"
-            android:id="@+id/button5"
+            android:id="@+id/buttonGotoChoose"
             android:layout_marginStart="43dp"
             android:textSize="10dp"
             android:layout_marginLeft="43dp"
             android:layout_below="@+id/textView15"
             android:layout_alignLeft="@+id/textView15"
             android:layout_alignStart="@+id/textView15"
-            android:onClick="onButtonChooseClicked" />
+            android:onClick="onButtonGotoChooseClicked" />
     </RelativeLayout>
 </LinearLayout>

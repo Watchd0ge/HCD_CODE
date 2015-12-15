@@ -14,7 +14,7 @@ public class Pop extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.pop);
 
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
@@ -25,11 +25,11 @@ public class Pop extends Activity {
         getWindow().setLayout(  (int)(width*.8 ), (int)(height*.4 ) );
     }
 
-    public void onButtonHomeClicked(View v) {
+    public void onButtonGotoHomeClicked(View v) {
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent);
     }
-    public void onButtonChooseClicked(View v) {
+    public void onButtonGotoChooseClicked(View v) {
         Intent intent = new Intent(getApplicationContext(), MainActivity_choosehelper.class);
         startActivity(intent);
     }

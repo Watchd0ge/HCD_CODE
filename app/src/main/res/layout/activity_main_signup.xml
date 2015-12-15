@@ -25,7 +25,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
+        android:id="@+id/editText_voucherID"
         android:layout_below="@+id/textView8"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -36,10 +36,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="확인"
-        android:id="@+id/button"
+        android:id="@+id/buttonEnter"
         android:nestedScrollingEnabled="true"
         android:onClick="onButtonEnterClicked"
-        android:layout_alignBottom="@+id/editText"
+        android:layout_alignBottom="@+id/editText_voucherID"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
@@ -64,7 +64,7 @@
         android:layout_alignLeft="@+id/textView8"
         android:layout_alignStart="@+id/textView8"
         android:layout_alignTop="@+id/textView"
-        android:layout_alignRight="@+id/button"
-        android:layout_alignEnd="@+id/button" />
+        android:layout_alignRight="@+id/buttonEnter"
+        android:layout_alignEnd="@+id/buttonEnter" />
 
 </RelativeLayout>
