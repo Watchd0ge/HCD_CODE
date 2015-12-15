@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.hcd.hcdproject">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Pop"
+            android:theme="@style/AppTheme.CustomTheme"
+            >
+        </activity>
+        <activity android:name=".MainActivity1">
+        </activity>
+        <activity android:name=".MainActivity2">
+        </activity>
+        <activity android:name=".MainActivity_choosehelper">
+        </activity>
+        <activity android:name=".MainActivity_login">
+        </activity>
+        <activity android:name=".MainActivity_login1">
+        </activity>
+        <activity android:name=".MainActivity_match">
+        </activity>
+        <activity android:name=".MainActivity_match1">
+        </activity>
+        <activity android:name=".MainActivity_match2">
+        </activity>
+        <activity android:name=".MainActivity_myinfo">
+        </activity>
+        <activity android:name=".MainActivity_myinfo1">
+        </activity>
+        <activity android:name=".MainActivity_signup">
+        </activity>
+        <activity android:name=".MainActivity_signup1">
+        </activity>
+        <activity android:name=".MainActivity_signup2">
+        </activity>
+        <activity android:name=".MainActivity_waiting">
+        </activity>
+    </application>
+
+</manifest>

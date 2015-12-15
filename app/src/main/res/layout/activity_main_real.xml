@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="org.hcd.hcdproject.MainActivity"
+    android:onClick="onButtonEnterClicked"
+    android:background="#FFD8D9D9">
+
+
+     <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mainimg02"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/mainimg02"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="이용자"
+        android:id="@+id/textView8"
+        android:layout_below="@+id/mainimg02"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:visibility="visible" />
+
+     <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/userlogin"
+        android:src="@drawable/login_red"
+        android:layout_below="@+id/textView8"
+        android:layout_centerHorizontal="true"
+        android:onClick="onButtonUserLoginClicked"
+         android:text="로그인"
+         android:layout_marginTop="10dp"
+         android:background="#f4a86e" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/helperlogin"
+        android:layout_below="@+id/textView9"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/login_blue"
+        android:onClick="onButtonHelperLoginClicked"
+        android:text="로그인"
+        android:layout_marginTop="10dp"
+        android:background="#f4a86e" />
+
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="활동보조자"
+        android:id="@+id/textView9"
+        android:layout_below="@+id/usersignup"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+         android:layout_marginTop="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/usersignup"
+        android:src="@drawable/signup_red"
+        android:onClick="onButtonUserSignupClicked"
+        android:text="신규등록"
+        android:layout_below="@+id/userlogin"
+        android:layout_alignLeft="@+id/userlogin"
+        android:layout_alignStart="@+id/userlogin" />
+
+     <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:src="@drawable/signup_blue"
+        android:onClick="onButtonHelperSignupClicked"
+        android:id="@+id/helpersignup"
+         android:text="신규등록"
+         android:layout_below="@+id/helperlogin"
+         android:layout_alignLeft="@+id/helperlogin"
+         android:layout_alignStart="@+id/helperlogin" />
+
+</RelativeLayout>

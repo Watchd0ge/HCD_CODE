@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="서비스 요구사항"
+            android:id="@+id/textView17"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="68dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오전"
+            android:id="@+id/radioButton"
+            android:layout_marginTop="88dp"
+            android:checked="false"
+            android:clickable="true"
+            android:layout_below="@+id/textView17"
+            android:layout_toLeftOf="@+id/textView17"
+            android:layout_toStartOf="@+id/textView17" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오후"
+            android:id="@+id/radioButton2"
+            android:checked="false"
+            android:clickable="true"
+            android:layout_alignTop="@+id/radioButton"
+            android:layout_centerHorizontal="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="심야"
+            android:id="@+id/radioButton3"
+            android:checked="false"
+            android:clickable="true"
+            android:layout_alignTop="@+id/radioButton2"
+            android:layout_toRightOf="@+id/textView17"
+            android:layout_toEndOf="@+id/textView17" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="* 시간대"
+            android:id="@+id/textView18"
+            android:layout_above="@+id/radioButton2"
+            android:layout_toLeftOf="@+id/textView17"
+            android:layout_toStartOf="@+id/textView17" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="평일"
+            android:id="@+id/radioButton4"
+            android:checked="false"
+            android:clickable="true"
+            android:layout_below="@+id/textView19"
+            android:layout_alignLeft="@+id/radioButton"
+            android:layout_alignStart="@+id/radioButton" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="주말"
+            android:id="@+id/radioButton5"
+            android:checked="false"
+            android:clickable="true"
+            android:layout_below="@+id/textView19"
+            android:layout_alignLeft="@+id/radioButton2"
+            android:layout_alignStart="@+id/radioButton2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="* 요일"
+            android:id="@+id/textView19"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/radioButton"
+            android:layout_alignLeft="@+id/textView18"
+            android:layout_alignStart="@+id/textView18" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사회"
+            android:id="@+id/radioButton6"
+            android:checked="false"
+            android:clickable="true"
+            android:layout_below="@+id/textView20"
+            android:layout_alignRight="@+id/textView18"
+            android:layout_alignEnd="@+id/textView18" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가사"
+            android:id="@+id/radioButton7"
+            android:checked="false"
+            android:clickable="true"
+            android:layout_alignTop="@+id/radioButton6"
+            android:layout_alignLeft="@+id/radioButton5"
+            android:layout_alignStart="@+id/radioButton5" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="신체"
+            android:id="@+id/radioButton8"
+            android:checked="false"
+            android:clickable="true"
+            android:layout_alignTop="@+id/radioButton7"
+            android:layout_alignLeft="@+id/radioButton3"
+            android:layout_alignStart="@+id/radioButton3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="* 분야"
+            android:id="@+id/textView20"
+            android:layout_marginTop="21dp"
+            android:layout_below="@+id/radioButton4"
+            android:layout_alignLeft="@+id/textView19"
+            android:layout_alignStart="@+id/textView19" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="* 차량필요여부"
+            android:id="@+id/textView21"
+            android:layout_marginTop="23dp"
+            android:layout_below="@+id/radioButton6"
+            android:layout_alignLeft="@+id/textView20"
+            android:layout_alignStart="@+id/textView20" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="필요"
+            android:id="@+id/radioButton9"
+            android:checked="false"
+            android:clickable="true"
+            android:layout_below="@+id/textView21"
+            android:layout_alignRight="@+id/textView18"
+            android:layout_alignEnd="@+id/textView18" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="불필요"
+            android:id="@+id/radioButton10"
+            android:checked="false"
+            android:clickable="true"
+            android:layout_alignTop="@+id/radioButton9"
+            android:layout_alignLeft="@+id/radioButton7"
+            android:layout_alignStart="@+id/radioButton7" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="다음"
+            android:id="@+id/button7"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="onButtonNextClicked" />
+    </RelativeLayout>
+</LinearLayout>
