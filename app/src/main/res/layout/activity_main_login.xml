@@ -25,21 +25,21 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
+        android:id="@+id/voucher_id"
         android:layout_below="@+id/textView8"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="5dp" />
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/login_btn"
+        android:layout_toStartOf="@+id/login_btn" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="확인"
-        android:id="@+id/button"
+        android:id="@+id/login_btn"
         android:nestedScrollingEnabled="true"
         android:onClick="onButtonEnterClicked"
-        android:layout_alignBottom="@+id/editText"
+        android:layout_alignBottom="@+id/voucher_id"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
@@ -64,7 +64,7 @@
         android:layout_alignLeft="@+id/textView8"
         android:layout_alignStart="@+id/textView8"
         android:layout_alignTop="@+id/textView"
-        android:layout_alignRight="@+id/button"
-        android:layout_alignEnd="@+id/button" />
+        android:layout_alignRight="@+id/login_btn"
+        android:layout_alignEnd="@+id/login_btn" />
 
 </RelativeLayout>
