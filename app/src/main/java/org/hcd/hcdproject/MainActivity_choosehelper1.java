@@ -20,6 +20,9 @@ public class MainActivity_choosehelper1 extends AppCompatActivity implements Vie
     private Button pickEndDate;
     private TextView dash;
 
+    private CheckBox longterm;
+    private CheckBox shortterm;
+
     private DatePickerDialog.OnDateSetListener beginDateListener =
             new DatePickerDialog.OnDateSetListener() {
 
@@ -54,6 +57,8 @@ public class MainActivity_choosehelper1 extends AppCompatActivity implements Vie
         pickEndDate.setVisibility(View.INVISIBLE);
         dash.setVisibility(View.INVISIBLE);
 
+        longterm = (CheckBox) findViewById(R.id.longterm);
+        shortterm = (CheckBox) findViewById(R.id.shortterm);
         initView();
     }
 
@@ -82,8 +87,8 @@ public class MainActivity_choosehelper1 extends AppCompatActivity implements Vie
 
 
     private void initView(){
-        final CheckBox longterm = (CheckBox) findViewById(R.id.longterm);
-        final CheckBox shortterm = (CheckBox) findViewById(R.id.shortterm);
+//        final CheckBox longterm = (CheckBox) findViewById(R.id.longterm);
+//        final CheckBox shortterm = (CheckBox) findViewById(R.id.shortterm);
         longterm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -110,7 +115,8 @@ public class MainActivity_choosehelper1 extends AppCompatActivity implements Vie
 
     public void onButtonCompleteClicked (View v){
         Intent intent = new Intent(getApplicationContext(), MainActivity_waiting.class);
-        startActivity(intent);
+        if(longterm.isChecked() | shortterm.isChecked())
+            startActivity(intent);
     }
     public void onButtonPrevClicked (View v){
         Intent intent = new Intent(getApplicationContext(), MainActivity_choosehelper.class);

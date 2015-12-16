@@ -8,6 +8,8 @@ import android.widget.CheckBox;
 
 public class MainActivity_choosehelper extends AppCompatActivity {
 //    private CheckBox need, noneed;
+//    private CheckBox morning, afternoon, midnight;
+//    private Che
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
