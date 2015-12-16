@@ -60,10 +60,6 @@ public class MainActivity_login extends AppCompatActivity {
                             Log.wtf("IT WORKED", "[" + voucher_id_txt.getText().toString() + "]");
                             if (dataSnapshot.exists()){
                                 Log.wtf("THERE IS SOMETHING", "WHOOP");
-//                                ContentValues temp = new ContentValues(1);
-//                                temp.put("KEY", "voucher_id");
-//                                temp.put("VALUE", voucher_id_txt.getText().toString());
-//                                localDB.insert("dictionary", null, temp);
                                 Intent intent = new Intent(MainActivity_login.this, MainActivity_login1.class);
                                 intent.putExtra("VOUCHER_ID", voucher_id_txt.getText().toString());
                                 startActivity(intent);

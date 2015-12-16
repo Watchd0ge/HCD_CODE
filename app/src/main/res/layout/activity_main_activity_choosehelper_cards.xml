@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="org.hcd.hcdproject.MainActivity_choosehelper_cards">
+
+    <it.gmariotti.cardslib.library.recyclerview.view.CardRecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        card:list_card_layout_resourceID="@layout/native_recyclerview_card_layout"
+        android:id="@+id/list_cardId"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/choice_confirm" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm Choices"
+        android:id="@+id/choice_confirm"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.hcd.hcdproject">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -16,6 +17,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".Pop"
             android:theme="@style/AppTheme.CustomTheme"
             >
@@ -33,6 +35,8 @@
         <activity android:name=".MainActivity_signup1"></activity>
         <activity android:name=".MainActivity_signup2"></activity>
         <activity android:name=".MainActivity_waiting"></activity>
+        <activity android:name=".MainActivity_choosehelper_cards"></activity>
+
 
     </application>
 
