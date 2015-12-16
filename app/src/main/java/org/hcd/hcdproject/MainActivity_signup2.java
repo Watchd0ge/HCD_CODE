@@ -24,4 +24,9 @@ public class MainActivity_signup2 extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onButtonEnterClicked(View v) {
+        Intent intent = new Intent(getApplicationContext(), MainActivity_signup1.class);
+        startActivity(intent);
+    }
+
 }

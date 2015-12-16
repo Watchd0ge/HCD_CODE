@@ -8,7 +8,6 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="org.hcd.hcdproject.MainActivity"
-    android:onClick="onButtonEnterClicked"
     android:background="#FFD8D9D9">
 
     <TextView
