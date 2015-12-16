@@ -15,6 +15,8 @@ import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
 
+import java.util.HashMap;
+
 public class MainActivity_signup extends AppCompatActivity {
 
 
@@ -46,12 +48,18 @@ public class MainActivity_signup extends AppCompatActivity {
                     myFirebaseRef.child("Profiles").child(editText_voucherID.getText().toString()).addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
-                            Log.wtf("IT WORKED", "[" + editText_voucherID.getText().toString() + "]");
                             if (dataSnapshot.exists()) {
-                                Log.wtf("THERE IS SOMETHING", "WHOOP");
-                                Intent intent = new Intent(MainActivity_signup.this, MainActivity_signup1.class);
-                                intent.putExtra("VOUCHER_ID", editText_voucherID.getText().toString());
-                                startActivity(intent);
+                                HashMap hash = (HashMap) dataSnapshot.getValue();
+                                if (((String) hash.get("Is_C")).matches("1")){
+                                    Log.wtf("lolling", hash.get("Is_C").toString());
+                                    Intent intent = new Intent(MainActivity_signup.this, MainActivity_signup1_caretaker.class);
+                                    intent.putExtra("VOUCHER_ID", editText_voucherID.getText().toString());
+                                    startActivity(intent);
+                                } else {
+                                    Intent intent = new Intent(MainActivity_signup.this, MainActivity_signup1.class);
+                                    intent.putExtra("VOUCHER_ID", editText_voucherID.getText().toString());
+                                    startActivity(intent);
+                                }
                             } else {
                                 showError();
                             }

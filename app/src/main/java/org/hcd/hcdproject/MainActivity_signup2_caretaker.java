@@ -15,7 +15,7 @@ import com.firebase.client.ValueEventListener;
 
 import java.util.HashMap;
 
-public class MainActivity_signup2 extends AppCompatActivity {
+public class MainActivity_signup2_caretaker extends AppCompatActivity {
 
     private EditText et;
     private EditText addInfo;
@@ -24,7 +24,7 @@ public class MainActivity_signup2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_signup2);
+        setContentView(R.layout.activity_main_signup2_caretaker);
         voucher_number = getIntent().getStringExtra("VOUCHER_ID");
         Firebase.setAndroidContext(this);
         myFirebaseRef = new Firebase("https://hcd-firebase.firebaseio.com/");
@@ -32,7 +32,7 @@ public class MainActivity_signup2 extends AppCompatActivity {
     }
 
     public void onButtonGotoMyInfoClicked(View v){
-        Intent intent = new Intent(getApplicationContext(), MainActivity_signup1.class);
+        Intent intent = new Intent(getApplicationContext(), MainActivity_signup1_caretaker.class);
         intent.putExtra("VOUCHER_ID", et.getText().toString());
         startActivity(intent);
     }
@@ -42,7 +42,7 @@ public class MainActivity_signup2 extends AppCompatActivity {
     }
 
     public void onButtonEnterClicked(View v) {
-        Intent intent = new Intent(getApplicationContext(), MainActivity_signup1.class);
+        Intent intent = new Intent(getApplicationContext(), MainActivity_signup1_caretaker.class);
         intent.putExtra("VOUCHER_ID", et.getText().toString());
         startActivity(intent);
     }
@@ -57,7 +57,7 @@ public class MainActivity_signup2 extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         myFirebaseRef.child("Profiles").child(voucher_number).child("Description").setValue(addInfo.getText().toString());
-                        Intent intent = new Intent(MainActivity_signup2.this, MainActivity_login1.class);
+                        Intent intent = new Intent(MainActivity_signup2_caretaker.this, MainActivity_login1.class);
                         intent.putExtra("VOUCHER_ID", voucher_number);
                         startActivity(intent);
                     }
@@ -67,7 +67,7 @@ public class MainActivity_signup2 extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         myFirebaseRef.child("Profiles").child(voucher_number).child("Description").setValue(addInfo.getText().toString());
-                        Intent intent = new Intent(MainActivity_signup2.this, MainActivity_choosehelper.class);
+                        Intent intent = new Intent(MainActivity_signup2_caretaker.this, MainActivity_choosehelper.class);
                         intent.putExtra("VOUCHER_ID", voucher_number);
                         startActivity(intent);
                     }
@@ -87,7 +87,6 @@ public class MainActivity_signup2 extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
                     HashMap hash = (HashMap) dataSnapshot.getValue();
-                    addInfo.setText((String) hash.get("Description"));
                 } else {
                     // DO NOTHING
                 }
