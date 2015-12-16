@@ -47,11 +47,7 @@ public class MainActivity_signup1 extends AppCompatActivity {
         intent.putExtra("VOUCHER_ID", et.getText().toString());
         startActivity(intent);
     }
-
-    public void onButtonRegisterClicked(View v) {
-        Intent intent = new Intent(MainActivity_signup1.this, Pop.class);
-        startActivity(intent);
-    }
+    
 
     public void onButtonEnterClicked(View v) {
         Intent intent = new Intent(getApplicationContext(), MainActivity_signup1.class);
