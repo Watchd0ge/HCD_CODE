@@ -8,7 +8,6 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="org.hcd.hcdproject.MainActivity"
-    android:onClick="onButtonEnterClicked"
     android:background="#FFD8D9D9">
 
     <TextView
@@ -224,10 +223,10 @@
         android:id="@+id/buttonGotoAddInfo"
         android:visibility="visible"
         android:onClick="onButtonGotoAddInfoClicked"
-        android:background="#33000000"
+        android:background="#00000000"
         android:textColor="#00000000"
         android:layout_below="@+id/textView"
-        android:layout_marginTop="230px"
+        android:layout_marginTop="250px"
         android:layout_alignRight="@+id/textView"
         android:layout_marginBottom="40dp" />
 

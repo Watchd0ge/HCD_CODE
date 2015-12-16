@@ -8,7 +8,6 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="org.hcd.hcdproject.MainActivity"
-    android:onClick="onButtonEnterClicked"
     android:background="#FFD8D9D9">
 
     <ImageButton
@@ -47,5 +46,15 @@
         android:layout_above="@+id/main_myinfo"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/welcome"
+        android:layout_alignRight="@+id/imageView6"
+        android:layout_alignEnd="@+id/imageView6"
+        android:layout_above="@+id/imageView6" />
 
 </RelativeLayout>
