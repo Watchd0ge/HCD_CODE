@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="이용자"
-        android:id="@+id/textView8"
+        android:id="@+id/tvVoucher"
         android:layout_below="@+id/mainimg02"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
@@ -37,7 +37,7 @@
         android:id="@+id/buttonUserLogin"
         android:src="@drawable/login_red_new"
          android:onClick="onButtonUserLoginClicked"
-         android:layout_below="@+id/textView8"
+         android:layout_below="@+id/tvVoucher"
          android:layout_centerHorizontal="true" />
 
     <ImageButton
@@ -66,7 +66,7 @@
         android:id="@+id/buttonUserSignup"
         android:src="@drawable/signup_red_new"
         android:onClick="onButtonUserSignupClicked"
-        android:layout_below="@+id/textView8"
+        android:layout_below="@+id/tvVoucher"
         android:layout_marginTop="57dp"
         android:layout_alignLeft="@+id/buttonHelperLogin"
         android:layout_alignStart="@+id/buttonHelperLogin" />

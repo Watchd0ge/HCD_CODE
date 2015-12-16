@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,10 +14,6 @@ import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.util.HashMap;
 
@@ -35,6 +30,7 @@ public class MainActivity_signup1 extends AppCompatActivity {
     private TextView age;
     private Button moreInfo;
     private String voucher_number;
+    private String isFromLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +38,28 @@ public class MainActivity_signup1 extends AppCompatActivity {
         setContentView(R.layout.activity_main_signup1);
         Firebase.setAndroidContext(this);
         myFirebaseRef = new Firebase("https://hcd-firebase.firebaseio.com/");
+//        if(getIntent().getStringExtra("VOUCHER_ID") != null)
         voucher_number = getIntent().getStringExtra("VOUCHER_ID");
         initView();
+
+
+        TextView tvVoucher = (TextView) findViewById(R.id.tvVoucher);
+        Button signup = (Button) findViewById(R.id.buttonEnter);
+        EditText et = (EditText) findViewById(R.id.editText_voucherID);
+        Button bt = (Button) findViewById(R.id.button10);
+        isFromLogin = getIntent().getStringExtra("isFromLogin");
+        if(isFromLogin.matches("t")) {
+            tvVoucher.setVisibility(View.INVISIBLE);
+            signup.setVisibility(View.INVISIBLE);
+            et.setVisibility(View.INVISIBLE);
+            bt.setVisibility(View.INVISIBLE);
+        }
+        else {
+            tvVoucher.setVisibility(View.VISIBLE);
+            signup.setVisibility(View.VISIBLE);
+            et.setVisibility(View.VISIBLE);
+            bt.setVisibility(View.INVISIBLE);
+        }
     }
 
     public void onButtonGotoAddInfoClicked(View v){

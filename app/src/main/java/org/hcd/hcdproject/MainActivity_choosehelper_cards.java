@@ -2,24 +2,17 @@ package org.hcd.hcdproject;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Build;
+import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.TextView;
-
 
 import java.util.ArrayList;
 
 import it.gmariotti.cardslib.library.internal.Card;
-import it.gmariotti.cardslib.library.internal.CardHeader;
-import it.gmariotti.cardslib.library.internal.ViewToClickToExpand;
 import it.gmariotti.cardslib.library.recyclerview.internal.CardArrayRecyclerViewAdapter;
 import it.gmariotti.cardslib.library.recyclerview.view.CardRecyclerView;
 
@@ -92,18 +85,18 @@ public class MainActivity_choosehelper_cards extends AppCompatActivity {
     private void runDialog(){
         new AlertDialog.Builder(this)
                 .setIcon(android.R.drawable.ic_dialog_alert)
-                .setTitle("Confirm Selection")
-                .setMessage("Are you happy with your choices?")
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                .setTitle("선택확인창")
+                .setMessage("원하는 활동보조사를 모두 선택하셨나요?")
+                .setPositiveButton("예", new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialog, int which) {
+                    public void onClick(DialogInterface dialog, int wich) {
                         changeOrNot = true;
                         Intent intent = new Intent(MainActivity_choosehelper_cards.this, MainActivity_waiting.class);
                         startActivity(intent);
                     }
 
                 })
-                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                .setNegativeButton("아니오", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         changeOrNot = false;

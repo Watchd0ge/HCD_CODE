@@ -22,9 +22,10 @@ public class MainActivity_signup extends AppCompatActivity {
     private Button sign_up_btn;
     private Firebase myFirebaseRef;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_signup);
         // FIREBASE SETUP

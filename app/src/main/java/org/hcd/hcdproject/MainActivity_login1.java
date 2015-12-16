@@ -19,6 +19,7 @@ import java.util.Iterator;
 public class MainActivity_login1 extends AppCompatActivity {
 
     private Firebase myFirebaseRef;
+    private String voucher_number;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,10 +43,14 @@ public class MainActivity_login1 extends AppCompatActivity {
 
         Firebase.setAndroidContext(this);
         myFirebaseRef = new Firebase("https://hcd-firebase.firebaseio.com/");
+
+        voucher_number = getIntent().getStringExtra("VOUCHER_ID");
     }
 
     public void onButtonMyInfoClicked(View v){
-        Intent intent = new Intent(getApplicationContext(), MainActivity_myinfo.class);
+        Intent intent = new Intent(getApplicationContext(), MainActivity_signup1.class);
+        intent.putExtra("isFromLogin", "t");
+        intent.putExtra("VOUCHER_ID", voucher_number);
         startActivity(intent);
     }
 

@@ -14,7 +14,7 @@ public class MainActivity_match extends AppCompatActivity {
     }
 
     public void onButtonMoreInfoClicked (View v){
-        Intent intent = new Intent(getApplicationContext(), MainActivity_match1.class);
+        Intent intent = new Intent(getApplicationContext(), MainActivity_match2.class);
         startActivity(intent);
     }
 
