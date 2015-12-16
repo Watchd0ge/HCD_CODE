@@ -17,27 +17,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".Pop"
-            android:theme="@style/AppTheme.CustomTheme"
-            >
-        </activity>
-        <activity android:name=".MainActivity_choosehelper"></activity>
-        <activity android:name=".MainActivity_choosehelper1"></activity>
-        <activity android:name=".MainActivity_login"></activity>
-        <activity android:name=".MainActivity_login1"></activity>
-        <activity android:name=".MainActivity_match"></activity>
-        <activity android:name=".MainActivity_match1"></activity>
-        <activity android:name=".MainActivity_match2"></activity>
-        <activity android:name=".MainActivity_myinfo"></activity>
-        <activity android:name=".MainActivity_myinfo1"></activity>
-        <activity android:name=".MainActivity_signup"></activity>
-        <activity android:name=".MainActivity_signup1"></activity>
-        <activity android:name=".MainActivity_signup2"></activity>
-        <activity android:name=".MainActivity_waiting"></activity>
-        <activity android:name=".MainActivity_choosehelper_cards"></activity>
-
-
+        <activity
+            android:name=".Pop"
+            android:theme="@style/AppTheme.CustomTheme" />
+        <activity android:name=".MainActivity_choosehelper" />
+        <activity android:name=".MainActivity_choosehelper1" />
+        <activity android:name=".MainActivity_login" />
+        <activity android:name=".MainActivity_login1" />
+        <activity android:name=".MainActivity_match" />
+        <activity android:name=".MainActivity_match1" />
+        <activity android:name=".MainActivity_match2" />
+        <activity android:name=".MainActivity_myinfo" />
+        <activity android:name=".MainActivity_myinfo1" />
+        <activity android:name=".MainActivity_signup" />
+        <activity android:name=".MainActivity_signup1" />
+        <activity android:name=".MainActivity_signup2" />
+        <activity android:name=".MainActivity_waiting" />
+        <activity android:name=".MainActivity_choosehelper_cards" />
+        <activity android:name=".MainActivity_signup1_caretaker" />
+        <activity android:name=".MainActivity_signup2_caretaker"></activity>
     </application>
 
 </manifest>
