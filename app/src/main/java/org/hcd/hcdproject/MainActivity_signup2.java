@@ -8,22 +8,32 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 
+import com.firebase.client.DataSnapshot;
+import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+import com.firebase.client.ValueEventListener;
+
+import java.util.HashMap;
+
 public class MainActivity_signup2 extends AppCompatActivity {
 
     private EditText et;
+    private EditText addInfo;
+    private Firebase myFirebaseRef;
+    private String voucher_number;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_signup2);
-
-        String voucher_number = getIntent().getStringExtra("voucher_number");
-        et = (EditText) findViewById(R.id.editText_voucherID);
-        et.setText(voucher_number);
+        voucher_number = getIntent().getStringExtra("VOUCHER_ID");
+        Firebase.setAndroidContext(this);
+        myFirebaseRef = new Firebase("https://hcd-firebase.firebaseio.com/");
+        initView();
     }
 
     public void onButtonGotoMyInfoClicked(View v){
         Intent intent = new Intent(getApplicationContext(), MainActivity_signup1.class);
-        intent.putExtra("voucher_number", et.getText().toString());
+        intent.putExtra("VOUCHER_ID", et.getText().toString());
         startActivity(intent);
     }
 
@@ -33,7 +43,7 @@ public class MainActivity_signup2 extends AppCompatActivity {
 
     public void onButtonEnterClicked(View v) {
         Intent intent = new Intent(getApplicationContext(), MainActivity_signup1.class);
-        intent.putExtra("voucher_number", et.getText().toString());
+        intent.putExtra("VOUCHER_ID", et.getText().toString());
         startActivity(intent);
     }
 
@@ -46,7 +56,9 @@ public class MainActivity_signup2 extends AppCompatActivity {
                 .setNegativeButton("홈 화면으로", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        myFirebaseRef.child("Profiles").child(voucher_number).child("Description").setValue(addInfo.getText());
                         Intent intent = new Intent(MainActivity_signup2.this, MainActivity_login1.class);
+                        intent.putExtra("VOUCHER_ID", voucher_number);
                         startActivity(intent);
                     }
 
@@ -54,11 +66,36 @@ public class MainActivity_signup2 extends AppCompatActivity {
                 .setPositiveButton("활동보조사 선택", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        myFirebaseRef.child("Profiles").child(voucher_number).child("Description").setValue(addInfo.getText());
                         Intent intent = new Intent(MainActivity_signup2.this, MainActivity_choosehelper.class);
+                        intent.putExtra("VOUCHER_ID", voucher_number);
                         startActivity(intent);
                     }
 
                 })
                 .show();
+    }
+
+    private void initView(){
+
+        addInfo = (EditText) findViewById(R.id.addInfo);
+        et = (EditText) findViewById(R.id.editText_voucherID);
+        et.setText(voucher_number);
+        et.setFocusable(false);
+        myFirebaseRef.child("Profiles").child(voucher_number).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    HashMap hash = (HashMap) dataSnapshot.getValue();
+                    addInfo.setText((String) hash.get("Description"));
+                } else {
+                    // DO NOTHING
+                }
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+            }
+        });
     }
 }
