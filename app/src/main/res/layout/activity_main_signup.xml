@@ -25,19 +25,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/editText_voucherID"
+        android:digits="0123456789"
+        android:singleLine="true"
         android:layout_below="@+id/textView8"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="5dp" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/signup"
+        android:layout_toStartOf="@+id/signup"
+        android:inputType="number"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="확인"
-        android:id="@+id/buttonEnter"
+        android:id="@+id/signup"
         android:nestedScrollingEnabled="true"
-        android:onClick="onButtonEnterClicked"
         android:layout_alignBottom="@+id/editText_voucherID"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
