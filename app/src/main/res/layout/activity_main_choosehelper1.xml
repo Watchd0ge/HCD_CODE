@@ -42,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="장기"
-        android:id="@+id/longterm"
+        android:id="@+id/morning"
         android:checked="false"
         android:layout_below="@+id/textView2"
         android:layout_toLeftOf="@+id/textView"
@@ -55,8 +55,8 @@
         android:text="* 기간"
         android:id="@+id/textView2"
         android:layout_below="@+id/imageView3"
-        android:layout_alignRight="@+id/longterm"
-        android:layout_alignEnd="@+id/longterm"
+        android:layout_alignRight="@+id/morning"
+        android:layout_alignEnd="@+id/morning"
         android:layout_marginTop="200px" />
 
 
@@ -64,11 +64,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="단기"
-        android:id="@+id/shortterm"
+        android:id="@+id/afternoon"
         android:checked="false"
-        android:layout_alignTop="@+id/longterm"
-        android:layout_toRightOf="@+id/longterm"
-        android:layout_toEndOf="@+id/longterm"
+        android:layout_alignTop="@+id/morning"
+        android:layout_toRightOf="@+id/morning"
+        android:layout_toEndOf="@+id/morning"
         android:layout_marginLeft="10dp"/>
 
     <Button android:layout_width="wrap_content"

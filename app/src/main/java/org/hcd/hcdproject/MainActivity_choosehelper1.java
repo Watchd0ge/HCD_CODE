@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity_choosehelper1 extends AppCompatActivity implements View.OnClickListener {
 
@@ -22,6 +23,7 @@ public class MainActivity_choosehelper1 extends AppCompatActivity implements Vie
 
     private CheckBox longterm;
     private CheckBox shortterm;
+    private boolean check_shortterm1 = false, check_shortterm2 = false;
 
     private DatePickerDialog.OnDateSetListener beginDateListener =
             new DatePickerDialog.OnDateSetListener() {
@@ -30,6 +32,7 @@ public class MainActivity_choosehelper1 extends AppCompatActivity implements Vie
                 public void onDateSet(DatePicker view, int year, int monthOfYear,
                                       int dayOfMonth) {
                     pickBeginDate.setText(year + "년 " + (monthOfYear + 1) + "월 " + dayOfMonth + "일");
+                    check_shortterm1 = true;
                 }
             };
     private DatePickerDialog.OnDateSetListener endDateListener =
@@ -39,6 +42,7 @@ public class MainActivity_choosehelper1 extends AppCompatActivity implements Vie
                 public void onDateSet(DatePicker view, int year, int monthOfYear,
                                       int dayOfMonth) {
                     pickEndDate.setText(year + "년 " + (monthOfYear + 1) + "월 " + dayOfMonth + "일");
+                    check_shortterm2 = true;
                 }
             };
 
@@ -57,8 +61,8 @@ public class MainActivity_choosehelper1 extends AppCompatActivity implements Vie
         pickEndDate.setVisibility(View.INVISIBLE);
         dash.setVisibility(View.INVISIBLE);
 
-        longterm = (CheckBox) findViewById(R.id.longterm);
-        shortterm = (CheckBox) findViewById(R.id.shortterm);
+        longterm = (CheckBox) findViewById(R.id.morning);
+        shortterm = (CheckBox) findViewById(R.id.afternoon);
         initView();
     }
 
@@ -114,9 +118,11 @@ public class MainActivity_choosehelper1 extends AppCompatActivity implements Vie
     }
 
     public void onButtonCompleteClicked (View v){
-        Intent intent = new Intent(getApplicationContext(), MainActivity_waiting.class);
-        if(longterm.isChecked() | shortterm.isChecked())
+        Intent intent = new Intent(getApplicationContext(), MainActivity_choosehelper_cards.class);
+        if(longterm.isChecked() | (shortterm.isChecked() & check_shortterm1 & check_shortterm2 ))
             startActivity(intent);
+        else
+            Toast.makeText(getApplicationContext(), "꼼꼼히 체크해주세요!", Toast.LENGTH_SHORT).show();
     }
     public void onButtonPrevClicked (View v){
         Intent intent = new Intent(getApplicationContext(), MainActivity_choosehelper.class);

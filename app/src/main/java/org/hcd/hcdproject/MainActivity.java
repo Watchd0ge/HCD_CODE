@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initViews();
+//        initViews();
 
 //        int width = 510;
 //        int height = 185;
@@ -59,17 +58,17 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), MainActivity_signup.class);
         startActivity(intent);
     }
-
-    private void initViews(){
-        Button card_btn = (Button) findViewById(R.id.button2);
-        card_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MainActivity_choosehelper_cards.class);
-                startActivity(intent);
-            }
-        });
-
-    }
+//
+//    private void initViews(){
+//        Button card_btn = (Button) findViewById(R.id.button2);
+//        card_btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, MainActivity_choosehelper_cards.class);
+//                startActivity(intent);
+//            }
+//        });
+//
+//    }
 
 }

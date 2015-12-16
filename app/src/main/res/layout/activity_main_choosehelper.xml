@@ -42,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="오전"
-        android:id="@+id/longterm"
+        android:id="@+id/morning"
         android:checked="false"
         android:layout_below="@+id/textView2"
         android:layout_toLeftOf="@+id/textView"
@@ -55,19 +55,19 @@
         android:text="* 시간대"
         android:id="@+id/textView2"
         android:layout_below="@+id/imageView3"
-        android:layout_alignRight="@+id/longterm"
-        android:layout_alignEnd="@+id/longterm"
+        android:layout_alignRight="@+id/morning"
+        android:layout_alignEnd="@+id/morning"
         android:layout_marginTop="200px" />
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="오후"
-        android:id="@+id/shortterm"
+        android:id="@+id/afternoon"
         android:checked="false"
-        android:layout_alignTop="@+id/longterm"
-        android:layout_toRightOf="@+id/longterm"
-        android:layout_toEndOf="@+id/longterm"
+        android:layout_alignTop="@+id/morning"
+        android:layout_toRightOf="@+id/morning"
+        android:layout_toEndOf="@+id/morning"
         android:layout_marginLeft="10dp"/>
 
     <CheckBox
@@ -76,9 +76,9 @@
         android:text="심야"
         android:id="@+id/midnight"
         android:checked="false"
-        android:layout_alignBottom="@+id/shortterm"
-        android:layout_toRightOf="@+id/shortterm"
-        android:layout_toEndOf="@+id/shortterm"
+        android:layout_alignBottom="@+id/afternoon"
+        android:layout_toRightOf="@+id/afternoon"
+        android:layout_toEndOf="@+id/afternoon"
         android:layout_marginLeft="10dp" />
 
     <TextView
@@ -87,7 +87,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="* 요일"
         android:id="@+id/textView3"
-        android:layout_below="@+id/longterm"
+        android:layout_below="@+id/morning"
         android:layout_alignLeft="@+id/textView2"
         android:layout_alignStart="@+id/textView2"
         android:layout_marginTop="20dp" />
@@ -99,8 +99,8 @@
         android:id="@+id/weekdays"
         android:checked="false"
         android:layout_below="@+id/textView3"
-        android:layout_alignLeft="@+id/longterm"
-        android:layout_alignStart="@+id/longterm" />
+        android:layout_alignLeft="@+id/morning"
+        android:layout_alignStart="@+id/morning" />
 
     <CheckBox
         android:layout_width="wrap_content"
