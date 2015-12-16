@@ -23,7 +23,7 @@
             >
         </activity>
         <activity android:name=".MainActivity_choosehelper"></activity>
-        <activity android:name=".MainActivity_choosehelper1"></activity>
+        <!--<activity android:name=".MainActivity_choosehelper1"></activity>-->
         <activity android:name=".MainActivity_login"></activity>
         <activity android:name=".MainActivity_login1"></activity>
         <activity android:name=".MainActivity_match"></activity>
@@ -35,6 +35,7 @@
         <activity android:name=".MainActivity_signup1"></activity>
         <activity android:name=".MainActivity_signup2"></activity>
         <activity android:name=".MainActivity_waiting"></activity>
+        <activity android:name=".MainActivity_choosehelper_cards"></activity>
 
 
     </application>
